@@ -25,7 +25,7 @@
             <li id="exit" class="exit-btn hide-desktop">
               <img src="images/exit.svg" alt="exit menu" />
             </li>
-            <li><a href="#">services</a></li>
+            <li><a href="#">home</a></li>
             <li><a href="#">services</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
@@ -121,8 +121,24 @@
         </div>
       </div>
     </footer>
-    <div class="footer-bottom-skew container">
+    <div class="footer-bottom-skew">
       <p></p>
     </div>
+
+    <script>
+      var menu = document.getElementById("menu");
+      var nav = document.getElementById("nav");
+      var exit = document.getElementById("exit");
+
+      menu.addEventListener("click", e => {
+        nav.classList.toggle("hide-mobile");
+        e.preventDefault();
+      });
+
+      exit.addEventListener("click", e => {
+        nav.classList.add("hide-mobile");
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>
